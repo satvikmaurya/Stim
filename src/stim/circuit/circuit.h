@@ -38,7 +38,7 @@ namespace stim {
 uint64_t add_saturate(uint64_t a, uint64_t b);
 uint64_t mul_saturate(uint64_t a, uint64_t b);
 
-std::vector<uint64_t> measure_qubits;
+__declspec(selectany) std::vector<uint64_t> measure_qubits;
 
 /// A description of a quantum computation.
 struct Circuit {
