@@ -304,6 +304,14 @@ void stim_pybind::pybind_circuit_methods(pybind11::module &, pybind11::class_<Ci
             .data());
 
     c.def_property_readonly(
+        "measure_qubits",
+        &Circuit::get_measure_qubits,
+        clean_doc_string(R"DOC(
+            Gets the measure qubits for the given code.
+        ))DOC").data()
+    );
+    
+    c.def_property_readonly(
         "num_ticks",
         &Circuit::count_ticks,
         clean_doc_string(R"DOC(

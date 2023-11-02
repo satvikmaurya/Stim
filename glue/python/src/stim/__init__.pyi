@@ -1382,6 +1382,14 @@ class Circuit:
             >>> c.num_detectors
             201
         """
+    
+    @property
+    def measure_qubits(
+        self,
+    ) -> List[int]:
+        """Returns the indices of all measure qubits in the patch
+        """
+        
     @property
     def num_measurements(
         self,

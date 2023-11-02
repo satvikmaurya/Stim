@@ -56,9 +56,11 @@ GeneratedCircuit _finish_surface_code_circuit(
     }
     for (auto q : x_measure_coords) {
         p2q[q] = coord_to_index(q);
+        measure_qubits.push_back(p2q[q]);
     }
     for (auto q : z_measure_coords) {
         p2q[q] = coord_to_index(q);
+        measure_qubits.push_back(p2q[q]);
     }
 
     // Reverse index.

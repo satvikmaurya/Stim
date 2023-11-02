@@ -38,6 +38,8 @@ namespace stim {
 uint64_t add_saturate(uint64_t a, uint64_t b);
 uint64_t mul_saturate(uint64_t a, uint64_t b);
 
+std::vector<uint64_t> measure_qubits;
+
 /// A description of a quantum computation.
 struct Circuit {
     /// Backing data stores for variable-sized target data referenced by operations.
@@ -234,6 +236,8 @@ struct Circuit {
     /// This method efficiently handles REPEAT blocks. It finishes in time proportional to the size of the circuit
     /// file, not time proportional to the amount of data produced by the circuit.
     std::map<uint64_t, std::vector<double>> get_final_qubit_coords() const;
+
+    std::vector<uint64_t> get_measure_qubits() const;
 
     /// Looks up the coordinate data of a detector.
     ///

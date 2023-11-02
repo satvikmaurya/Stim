@@ -1044,6 +1044,10 @@ std::vector<double> Circuit::final_coord_shift() const {
     return coord_shift;
 }
 
+std::vector<uint64_t> Circuit::get_measure_qubits() const {
+    return measure_qubits;
+}
+
 void get_detector_coordinates_helper(
     const Circuit &circuit,
     const std::set<uint64_t> &included_detector_indices,
